@@ -4,6 +4,20 @@
  * @param tag The HTML tag to be created
  * @param attrs Nullable, supply HTML Attributes as key value pairs {class: 'panel', id: 'submitBtn', href: 'https://example.com'}
  * @param children HTML Elements or text. DO NOT use JSX <p>Text</p>
+ * 
+ * @example el('p',null,'Hello, world!')
+ *      // Out: <p>Hello, world!</p>
+ * 
+ * @example el('h1',{"class":"text-center"}, 'My Title')
+ *      // Out: <h1 class="text-center">My Title</h1>
+ * 
+ * @example el('ul',null, 
+ *              el('li',null,'item1'),
+ *              el('li',null,'item2'), 
+ *              el('li',null,'item3'))
+ *      // Out: <ul><li>item1</li>
+ *                  <li>item2</li>
+ *                  <li>item3</li></ul>
  */
 function el(tag, attrs, ...children) {
   let element = tag ? document.createElement(tag) : null;
