@@ -18,5 +18,11 @@ function el(tag, attrs, ...children) {
   }
   return element;
 }
-
 var example = el('div', {"id":'main', "class": 'panel'}, el('h1',null,'My Example'), el('p',null,'Using this function sure makes creating DOM elements easier'));
+/**
+ * Output:
+ * <div id="main" class="panel">
+ *    <h1>My Example</h1>
+ *    <p>Using this function sure makes creating DOM elements easier</p>
+ * </div>
+ */
