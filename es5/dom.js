@@ -19,16 +19,16 @@
  *                  <li>item2</li>
  *                  <li>item3</li></ul>
  */
-function el(tag, attrs) {
+function el(htmlTag, htmlAttributes) {
     var children = [];
     for (var _i = 2; _i < arguments.length; _i++) {
         children[_i - 2] = arguments[_i];
     }
-    var element = tag ? document.createElement(tag) : null;
-    var keys = attrs && element ? Object.keys(attrs) : null;
+    var element = htmlTag ? document.createElement(htmlTag) : null;
+    var keys = htmlAttributes && element ? Object.keys(htmlAttributes) : null;
     var childNodes = children && element ? children : null;
     for (var i in keys) {
-        element.setAttribute(keys[i], attrs[keys[i]]);
+        element.setAttribute(keys[i], htmlAttributes[keys[i]]);
     }
     for (var _a = 0, childNodes_1 = childNodes; _a < childNodes_1.length; _a++) {
         var node = childNodes_1[_a];
